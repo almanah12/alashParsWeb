@@ -1,0 +1,28 @@
+{% extends 'scrap/base_scrap.html' %}
+
+{% block title %}
+  Scrap table
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+<!--      <th scope="col">id</th>-->
+      <th scope="col">Vendor code</th>
+      <th scope="col">Name good</th>
+    </tr>
+  </thead>
+    {% for data in info %}
+      <tbody>
+        <tr>
+<!--          <th scope="row">{{data.count_id}}</th>-->
+          <td>{{data.vend_code}}</td>
+          <td>{{data.model}}</td>
+        </tr>
+      </tbody>
+    {% endfor %}
+
+</table>
+{% endblock %}
